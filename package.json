@@ -1,0 +1,22 @@
+{
+  "name": "learning-d3",
+  "version": "1.0.0",
+  "description": "Play with D3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spatney/Learning-D3.git"
+  },
+  "author": "Sachin Patney",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/spatney/Learning-D3/issues"
+  },
+  "homepage": "https://github.com/spatney/Learning-D3#readme",
+  "dependencies": {
+    "d3": "^3.5.17"
+  }
+}

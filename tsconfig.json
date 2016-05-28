@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "target": "ES5",
+        "sourceMap": true,
+        "out": "./.bin/app.js"
+    },
+    "files": [
+        "./node_modules/d3/d3.min.js",
+        "./typings/browser.d.ts",
+        "src/main.ts"
+    ]
+}
