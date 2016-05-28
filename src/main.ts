@@ -1,3 +1,5 @@
+
+let animation = 1000;
 let svg = d3.select('#chart')
     .append('svg')
     .attr('height', 600)
@@ -10,14 +12,19 @@ svg
         'cx': 300,
         'cy': 300,
         'fill': 'green'
+    }).on('click', function () {
+        d3.select(this)
+            .transition()
+            .duration(animation)
+            .ease('bounce')
+            .attr('fill', 'red')
+            .attr('r', 10)
     })
+
+svg
+    .select('circle')
     .transition()
-    .duration(2000)
+    .duration(animation)
     .ease('elastic')
     .attr('fill', 'hotpink')
-    .attr('r',200)
-    .transition()
-    .duration(2000)
-    .ease('bounce')
-    .attr('fill', 'red')
-    .attr('r',10)
+    .attr('r', 200)
