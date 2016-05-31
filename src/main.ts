@@ -1,5 +1,6 @@
 
 let animation = 1000;
+let expanded = true;
 let svg = d3.select('#chart')
     .append('svg')
     .attr('height', 600)
@@ -13,18 +14,31 @@ svg
         'cy': 300,
         'fill': 'green'
     }).on('click', function () {
-        d3.select(this)
-            .transition()
-            .duration(animation)
-            .ease('bounce')
-            .attr('fill', 'red')
-            .attr('r', 10)
+        if (expanded) {
+            collapse(d3.select(this));
+        } else {
+            expand(d3.select(this));
+        }
+        expanded = !expanded;
+
     })
 
-svg
-    .select('circle')
-    .transition()
-    .duration(animation)
-    .ease('elastic')
-    .attr('fill', 'hotpink')
-    .attr('r', 200)
+expand(svg.select('circle'));
+
+function expand(node: d3.Selection<SVGElement>) {
+    node
+        .transition()
+        .duration(animation)
+        .ease('elastic')
+        .attr('fill', 'hotpink')
+        .attr('r', 200)
+}
+
+function collapse(node: d3.Selection<SVGElement>) {
+    node
+        .transition()
+        .duration(animation)
+        .ease('bounce')
+        .attr('fill', 'red')
+        .attr('r', 20)
+}
