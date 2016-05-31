@@ -7,7 +7,11 @@
     },
     "files": [
         "./node_modules/d3/d3.min.js",
+        "./node_modules/lodash/lodash.js",
         "./typings/browser.d.ts",
+        "src/circle_with_click.ts",
+        "src/circle_with_enter_update_exit.ts",
+        "src/circle_with_enter_update_exit_animation.ts",
         "src/main.ts"
     ]
 }
