@@ -44,6 +44,6 @@ function circle_with_enter_update_exit_animation() {
     };
 
    svg.on('click', () => update());
-    
-    //setInterval(()=>update(), duration + 100);
+   
+   //setInterval(()=>update(), duration + 100);
 }
