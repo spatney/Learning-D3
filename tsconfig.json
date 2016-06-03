@@ -12,6 +12,7 @@
         "src/circle_with_click.ts",
         "src/circle_with_enter_update_exit.ts",
         "src/circle_with_enter_update_exit_animation.ts",
+        "src/cheerMeter.ts",
         "src/main.ts"
     ]
 }
