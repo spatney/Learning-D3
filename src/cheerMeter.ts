@@ -15,8 +15,8 @@ interface CheerData {
 }
 
 enum UpdateType{
-   Data,
-   Viewport
+   Data = 1,
+   Viewport = 2
 }
 
 interface VisualUpdateOptions {
