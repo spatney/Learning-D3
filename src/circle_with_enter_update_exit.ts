@@ -3,12 +3,13 @@ function circle_with_enter_update_exit() {
         .append('svg')
         .attr('height', 600)
         .attr('width', 600);
+        
+    let data = [10, 20, 30, 40, 50, 60, 70, 80];
 
-    function update() {
-        let data = [10, 20, 30, 40, 50, 60, 70, 80];
-        let math = Math.random() * data.length;
+    function update() {      
+        let sample = Math.random() * data.length;
 
-        data = (<any>_).sampleSize(data, math);
+        data = (<any>_).sampleSize(data, sample);
         console.log(data);
         let selection = svg.selectAll('.happyCircles').data(data);
 
