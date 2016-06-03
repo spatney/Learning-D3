@@ -13,9 +13,15 @@ interface CheerData {
     teamB: TeamInfo;
 }
 
+enum UpdateType{
+   Data,
+   Viewport
+}
+
 interface VisualUpdateOptions {
     viewport: IViewport;
     data: CheerData;
+    type: UpdateType
 }
 
 interface IVisual {
