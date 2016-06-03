@@ -31,6 +31,8 @@ interface IVisual {
 
 /**
  * Implement a CheerMeter that is an IVisual
+ * 
+ * Modify this implementation so its more fluid & dynamic
  */
 class CheerMeter implements IVisual{ // 0db -> 140db
     
@@ -40,13 +42,19 @@ class CheerMeter implements IVisual{ // 0db -> 140db
         this.svg = d3.select(element).append('svg');
     }
     
+    private transform(data: CheerData): TeamInfo[]{
+        return [data.teamA, data.teamB];  
+    }
+    
     public update(options: VisualUpdateOptions){
-        var data = [options.data.teamA, options.data.teamB];       
+        let  data = this.transform(options.data);
         let selection = this.svg.selectAll('.cheerText').data(data);
+
         this.svg.attr({
             height: options.viewport.height,
             width: options.viewport.width
         })
+        
         selection.enter()
             .append('text')
             .classed('cheerText', true);

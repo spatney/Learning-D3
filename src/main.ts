@@ -18,7 +18,7 @@ setInterval(function () {
             teamA: {
                 volume: v1,
                 name: 'Seahawks',
-                color: 'Blue'
+                color: 'blue'
             },
             teamB: {
                 volume: v2,
